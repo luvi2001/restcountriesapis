@@ -73,7 +73,7 @@ export default function CountryDetail() {
       const decoded = jwtDecode(token);
       const email = decoded.email;
   
-      const res = await axios.post("http://localhost:5000/api/auth/favorite", {
+      const res = await axios.post("https://restcountriesapis.onrender.com/api/auth/favorite", {
         email: email,
         country: countryData.name,
       });
