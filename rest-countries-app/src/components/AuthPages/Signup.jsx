@@ -26,7 +26,7 @@ function Signup() {
         password,
       });
       alert('User registered successfully');
-      navigate('/login');
+      navigate('/');
     } catch (err) {
       alert(err.response?.data?.message || 'Signup failed');
     }
