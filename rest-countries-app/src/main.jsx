@@ -18,26 +18,29 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       {
-        path: "/home",
-        element: <Home />,
-      },
-      {
-        path: "/signup",
-        element: <Signup />,
-      },
-      {
-        path: "/",
+        index: true, // same as path: "/", but cleaner
         element: <Login />,
       },
       {
-        path: "/contact",
+        path: "home",
+        element: <Home />,
+      },
+      {
+        path: "signup",
+        element: <Signup />,
+      },
+      {
+        path: "contact",
         element: <Contact />,
       },
       {
-        path: "/chatbox",
+        path: ":country",
+        element: <SingleCountry />,
+      },
+      {
+        path: "chatbox",
         element: <ChatBox />,
       },
-
     ],
   },
 ]);
