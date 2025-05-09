@@ -31,7 +31,7 @@ const ChatBotGPT = () => {
         },
         {
           headers: {
-            Authorization: `Bearer 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`,
+            Authorization: `Bearer ${import.meta.env.VITE_OPENROUTER_API_KEY}`,
             'Content-Type': 'application/json'
           }
         }
