@@ -9,6 +9,7 @@ import ErrorPage from "./components/ErrorPage/ErrorPage.jsx";
 import Contact from "./components/Navigation/Contact.jsx";
 import Login from "./components/AuthPages/Login.jsx";
 import Signup from "./components/AuthPages/Signup.jsx";
+import ChatBox from "./components/ChatBotGPT.jsx";
 
 const router = createBrowserRouter([
   {
@@ -17,25 +18,26 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       {
-        index: true, // same as path: "/", but cleaner
-        element: <Login />,
-      },
-      {
-        path: "home",
+        path: "/home",
         element: <Home />,
       },
       {
-        path: "signup",
+        path: "/signup",
         element: <Signup />,
       },
       {
-        path: "contact",
+        path: "/",
+        element: <Login />,
+      },
+      {
+        path: "/contact",
         element: <Contact />,
       },
       {
-        path: ":country",
-        element: <SingleCountry />,
+        path: "/chatbox",
+        element: <ChatBox />,
       },
+
     ],
   },
 ]);
