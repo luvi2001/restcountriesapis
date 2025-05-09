@@ -32,7 +32,7 @@ const ChatBotGPT = () => {
         {
           headers: {
             Authorization: `Bearer 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`,
-            'HTTP-Referer': 'http://localhost:3000',
+            'HTTP-Referer': 'https://aroundthecountries.netlify.app',
             'Content-Type': 'application/json'
           }
         }
