@@ -30,6 +30,28 @@ router.post("/favorite", async (req, res) => {
       res.status(500).json({ message: "Server error" });
     }
   });
+
+  // GET /api/user/favorites?email=someone@example.com
+router.get('/favorites', async (req, res) => {
+  const { email } = req.query;
+
+  if (!email) {
+    return res.status(400).json({ error: 'Email is required' });
+  }
+
+  try {
+    const user = await User.findOne({ email });
+    if (!user) {
+      return res.status(404).json({ error: 'User not found' });
+    }
+
+    res.json({ favoriteCountries: user.favoriteCountries });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Server error' });
+  }
+});
+
   
 
 module.exports = router;

@@ -10,6 +10,7 @@ import Contact from "./components/Navigation/Contact.jsx";
 import Login from "./components/AuthPages/Login.jsx";
 import Signup from "./components/AuthPages/Signup.jsx";
 import ChatBox from "./components/ChatBotGPT.jsx";
+import Favourites from "./components/FavoriteCountries.jsx";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
       {
         path: "chatbox",
         element: <ChatBox />,
+      },
+            {
+        path: "favourites",
+        element: <Favourites />,
       },
     ],
   },
