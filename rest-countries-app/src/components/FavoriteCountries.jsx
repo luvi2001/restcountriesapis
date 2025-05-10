@@ -19,7 +19,7 @@ const FavoriteCountries = () => {
         const email = decoded.email;
 
         // Send email to backend without auth header
-        const res = await axios.get(`http://localhost:5000/api/auth/favorites?email=${encodeURIComponent(email)}`);
+        const res = await axios.get(`https://restcountriesapis.onrender.com/api/auth/favorites?email=${encodeURIComponent(email)}`);
         const favoriteCountries = res.data.favoriteCountries;
 
         const countryData = await Promise.all(
